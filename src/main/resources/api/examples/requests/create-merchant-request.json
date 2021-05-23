@@ -165,5 +165,6 @@
     "SiteVisitation": true,
     "MerchantCode": "merchantCode",
     "ParentId": 1,
-    "TcAcceptedDateTime": "01-06-2019"
+    "TcAcceptedDateTime": "01-06-2019",
+    "TcAccepted": "true"
 }
