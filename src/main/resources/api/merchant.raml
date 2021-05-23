@@ -1,0 +1,164 @@
+#%RAML 1.0
+title: Merchant
+version: v1
+description: These APIs are used to perform operations on Merchant in the MMS System.
+uses:
+  createmerchant: types/create-merchant-library.raml
+  modifymerchant: types/modify-merchant-library.raml
+traits:
+  errors: !include traits/error-responses.raml
+/merchant:
+  post:
+    description: This API is for creating a new merchant for Merchant Management System.Only Currency Pay User can create merchant to MMS.
+    body:
+      application/json:
+        example: !include examples/requests/create-merchant-request.json
+        type: createmerchant.createmerchant 
+    responses:
+      200:
+        body:
+          application/json:
+            example: !include examples/responses/create-merchant-response.json
+    is:
+      - errors
+  put:
+    description: This API is for updating an existing Merchant. Accessible to Currency Pay Users Only.
+    body:
+      application/json:
+        example: !include examples/requests/modify-merchant-request.json
+        type: modifymerchant.modifymerchant
+    responses:
+      200:
+        body:
+          application/json:
+            example: !include examples/responses/modify-merchant-response.json
+    is:
+      - errors
+  get:
+    queryParameters:
+      limit:
+        description: Allows user to specify number of records from an API in one page.
+        type: integer
+        default: 50
+        minimum: 1
+      offset:
+        description: Allows user to paginate records in a request.
+        type: integer
+        default: 10
+        minimum: 0
+    responses:
+      200:
+        body:
+          application/json:
+            example: !include examples/responses/all-merchants-response.json
+      403:
+        description: User not authorized to perform this action.
+      404:
+        description: Merchant not found!
+      500:
+        description: Failed to fetch existing merchant.
+  /onBoardingStatus:
+    post:
+      description: This API used to fetch the Merchant Onboarding Status for Merchant Management System.
+      body:
+        application/json:
+          example: !include examples/requests/merchant-onboard-status-request.json
+      responses:
+        200:
+          body:
+            application/json:
+              example: !include examples/responses/merchant-on-boarding-status-response.json
+        404:
+          description: UserTokenDetails missing.
+        500:
+          description: Internal server error.          
+/merchant/{merchantid}:
+  get:
+    description: Using this API user will be able to fetch Merchant's by MerchantId to Merchant Management System. Accessible to Merchant and Currency Pay User.
+    responses:
+      200:
+        body:
+          application/json:
+            example: !include examples/responses/merchant-by-merchantid-response.json
+      403:
+        description: User not authorized to perform this action.
+      404:
+        description: Merchant not found!
+      500:
+        description: Failed to fetch Merchant By merchantId.
+/merchant/{merchantId}/paymentInstrument:
+  get:
+    description: This API is used to fetch payment instrument by merchantId API for Merchant Management System. Accessible to Merchant and Currency Pay User.
+    responses:
+      200:
+        body:
+          application/json:
+            example: !include examples/responses/payment-instrument-by-merchant-id-response.json
+      403:
+        description: User not authorized to perform this action.
+      404:
+        description: Merchant not found!
+      500:
+        description: Failed Get Payment instrument by Merchant Id.
+/search/merchant:
+  get:
+    description: Using this API user will be able to Search Merchant to Merchant Management System.
+    body:
+      application/json:
+        example: !include examples/requests/merchant-list-request.json
+    queryParameters:
+      MID:
+        required: true
+        type: string
+      Status:
+        required: true
+        type: any
+      MerchantWorkflowId:
+        required: true
+        type: number
+      BusinessName:
+        required: true
+        type: string
+      BusinessEmailID:
+        required: true
+        type: string
+      ParentId:
+        required: true
+        type: number
+      limit:
+        type: integer
+        default: 50
+        minimum: 1
+      offset:
+        type: integer
+        default: 10
+        minimum: 0
+    responses:
+      200:
+        body:
+          application/json:
+            example: !include examples/responses/merchant-list-response.json
+      403:
+        description: User not authorized to perform this action.
+      404:
+        description: Merchant not found!
+      500:
+        description: Failed to Search Merchant.
+/register/merchant:
+  patch:
+    description: This API register's merchant on payment processor for Merchant Management System.
+    body:
+      application/json:
+        example: !include examples/requests/register-merchant-request.json
+    responses:
+      200:
+        body:
+          application/json:
+            example: !include examples/responses/register-merchant-response.json
+      403:
+        description: Logged in user is not a cpuser.
+      404:
+        description: Merchant not found!
+      500:
+        description: Failed to decrypt bank account number for buyer.
+

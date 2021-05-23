@@ -1,0 +1,22 @@
+{
+  "MerchantId": 1,
+  "PaymentTypes": [
+    {
+      "PaymentTypeId": 1,
+      "PaymentTypeName": "Credit/Debit Card",
+      "MerchantPaymentTypes": {
+        "MerchantPaymentTypeId": 1,
+        "PaymentTypeId": 1,
+        "MerchantID": 1,
+        "IsActive": true,
+        "CreatedBy": 15148,
+        "CreatedDateTime": "2020-03-03T07:13:09.713Z",
+        "UpdatedBy": null,
+        "UpdatedDateTime": null,
+        "IsApproved": null,
+        "ApprovedBy": null,
+        "ApprovedDateTime": null
+      }
+    }
+  ]
+}

@@ -1,0 +1,222 @@
+{
+    "MerchantId": 1,
+    "IsDraft": false,
+    "IsActive": true,
+    "ISSuperMerchant": true,
+    "IsTcAccepted": true,
+    "LimitProfileId": null,
+    "MerchantWorkflow": {
+        "MerchantWorkflowId": 1,
+        "MerchantWorkDesc": "Created"
+    },
+    "BusinessDetail": {
+        "MerchantBusinessDetailId": 1,
+        "BusinessName": "Updating Business Name",
+        "BusinessEmailID": "mdanjou@gocurrency.com",
+        "DBAStatementDesc": "Currency Pay",
+        "BusinessNameOnCard": "Business Name On Card",
+        "TaxIdNo": "12345678",
+        "ServicePhone": "+1 (888) 123-4567",
+        "YearsInBusiness": 20,
+        "Website": "www.currencypay.com",
+        "IsCreditCardAccepted": true,
+        "CreditCardSales": 20000,
+        "BusinessPhone": "+1 (888) 123-4567",
+        "Fax": "+1 (877) 123-4556",
+        "AddressLine1": "123 Main Street",
+        "AddressLine2": "AddressLine2",
+        "AddressLandMark": "Address Land Mark",
+        "City": "Los Angeles",
+        "Zip": "90025",
+        "BankRoutingNumber": "123456789",
+        "BusinessContact":{
+                   "BUsinessContactTypeId": 231
+                },
+        "BankAccountNumber": "1111",
+        "BankDescription": "Bank description",
+        "IsApproved": true,
+        "FirstName": "null",
+        "LastName": "null",
+        "AverageTicketPrice": 1000,
+        "HighestTicketPrice": 5800,
+        "TaxFilingName": "Update CurrencyPay",
+        "IsBusinessForeignEntity": false,
+        "TinRequestedGuid": "12345678",
+        "EmployeeIdentificationNumber": "1234",
+        "YearsAtLocation": 20,
+        "YearIncorporated": 2018,
+        "VisaProcessing": true,
+        "MCProcessing": true,
+        "DiscoverProcessing": true,
+        "AmexProcessing": true,
+        "LegalContactName": "Matt",
+        "InstName": "Currency",
+        "Token": "Token",
+        "PercentDelivered0Days": 20,
+        "PercentDelivered7Days": 20,
+        "PercentDelivered14Days": 20,
+        "PercentDelivered30Days": 20,
+        "PercentDeliveredMore30Days": 20,
+        "BusinessType": {
+            "BusinessTypeId": 3,
+            "BusinessTypeName": "CORP"
+        },
+        "Country": {
+            "CountryId": 1,
+            "CountryName": "US",
+            "CountryShortName": "US",
+            "CountryCode": "null"
+        },
+        "State": {
+            "StateId": 5,
+            "StateName": "California",
+            "StateCode": "94041",
+            "Abbreviation": "CA"
+        },
+        "BankAccountType": {
+            "BankAccountTypeId": 3,
+            "BankAccountTypeName": "Corporate Checking"
+        },
+        "BusinessContactType": {
+            "BusinessContactTypeId": 2,
+            "BusinessContactTypeName": "BILLING"
+        },
+        "IncorporationState": {
+            "StateId": 5,
+            "StateName": "California",
+            "StateCode": "94041",
+            "Abbreviation": "CA"
+        }
+    },
+    "MerchantType": {
+        "MerchantTypeId": 7,
+        "MerchantTypeName": "eCommerce",
+        "MerchantTypeDesc": null
+    },
+    "MerchantCategory": {
+        "MerchantCategoryId": 1,
+        "MerchantCategoryCode": 5999,
+        "MerchantCategoryDesc": "Miscellaneous and Specialty Retail Stores"
+    },
+    "FeeProfile": {
+        "FeeProfileId": 1
+    },
+    "TcAcceptedDateTime": "01-06-2019",
+    "PaymentTypes": 
+        {
+            "PaymentTypeId": 1,
+            "PaymentTypeName": "Credit/Debit Card",
+            "MerchantPaymentTypes": {
+                "MerchantPaymentTypeId": 16125,
+                "PaymentTypeId": 1,
+                "MerchantID": 1,
+                "IsActive": true
+            }
+        },
+    "Owners": 
+        {
+            "MerchantOwnerId": 5,
+            "FirstName": "Charles",
+            "LastName": "Last Name",
+            "DOB": "09-21-1980",
+            "SSN": "6789",
+            "BusinessTitle": "CEO",
+            "OwnershipPer": 9,
+            "DriverLicense": "1234567891011",
+            "Email": "username@gocurrency.com",
+            "PhoneNo": "+1 (888) 123-4567",
+            "AddAdditionalOwner": null,
+            "AddressLine1": "123 fake street",
+            "AddressLine2": "Address Line2",
+            "AddressLandMark": "Address Land Mark",
+            "City": "Los Angeles",
+            "Zip": "90066",
+            "IsApproved": true,
+            "IsCreditBureauReportAvailable": true,
+            "BureauScore": 90,
+            "IsGovernmentDocumentVerified": true,
+            "GovernmentDocuments": "Yes",
+            "IsThirdPartyDatabaseVerified": true,
+            "ThirdPartyDatabaseType": "Yes",
+            "MiddleName": "Middle Name",
+            "Title": "Mr.",
+            "Token": "Token",
+            "Country": {
+                "CountryId": 1,
+                "CountryName": "US",
+                "CountryShortName": "US",
+                "CountryCode": null
+            },
+            "State": {
+                "StateId": 5,
+                "StateName": "California",
+                "StateCode": "94041",
+                "Abbreviation": "CA"
+            },
+            "OwnerType": {
+                "OwnerTypeId": 2,
+                "OwnerTypeName": "Owner"
+            }
+        },
+    "L2L3Details": 
+        {
+            "MerchantL2L3DetailId": 1,
+            "MerchantId": 1,
+            "Tax": "1",
+            "OrderNumber": "12345",
+            "ShippingAmount": "1",
+            "DutyAmount": "1",
+            "OrderDiscount": "1",
+            "Name": "Trailer",
+            "Description": "Parts",
+            "CommodityCode": "929",
+            "ProductCode": "099 0",
+            "ItemPrice": "100",
+            "ItemDiscount": "1",
+            "Quantity": "1",
+            "UnitofMeasure": "Each",
+            "ItemTotal": "100",
+            "NetworkType": "Visa"
+        },
+        
+    "BbbRating": {
+        "BbbRatingId": 2,
+        "BbbRatingName": "A",
+        "RangeFrom": 94,
+        "RangeTo": 96.99
+    },
+    "Complaints12Months": 0,
+    "Complaints36Months": 0,
+    "OFACReviewPassed": true,
+    "SiteVisitation": true,
+    "OnSiteVisitPerformed": true,
+    "ProductsAndServicesSold": "Auction Rooms",
+    "F2FTransactionsPer": 50,
+    "PhoneTransactionsPer": 20,
+    "EmailTransactionsPer": 0,
+    "POSorCardTransactionsPer": 0,
+    "InternetTransactionsPer": 20,
+    "IsFSObtained": true,
+    "FSType": "Type",
+    "Cash": "Cash",
+    "FSTotalRevenue": 22222,
+    "FSStatementEndDate": "11-20-2019",
+    "FSNoOfMonths": 12,
+    "FSNetIncome": 22222,
+    "FSTotalAssets": 2222,
+    "FSTotalLiabilities": 22,
+    "FSTangibleNetWorth": 2222,
+    "FSWorkingCapital": 2222,
+    "FSCurrentRation": 2222,
+    "FSDebtToTNWRatio": "10",
+    "EcommerceIndicator": "Indicator",
+    "CityUrlPhone": "URL Phone",
+    "ResidentStatus": "Resident Status",
+    "SalesChannel": "Sales Channel",
+    "PricingType": "Type",
+    "BusinessToBusiness": 22,
+    "BusinessToConsumer": 22,
+    "MerchantCode": "merchantCode",
+    "PhoneEmailTransactionsPer": 0,
+    "ParentId": 123
+}

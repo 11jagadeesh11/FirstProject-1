@@ -1,0 +1,41 @@
+{
+  "count": 301,
+  "rows": [
+    {
+      "MerchantId": 1,
+      "MID": "M1R000001",
+      "ISSuperMerchant": true,
+      "CreatedDateTime": "2020-03-03 07:13:09.270Z",
+      "IsActive": true,
+      "FDTokenType": null,
+      "FDMID": null,
+      "BusinessDetail": {
+        "BusinessName": "Currency Pay",
+        "BusinessEmailID": "mdanjou@gocurrency.com",
+        "DBAStatementDesc": "Currency Pay"
+      },
+      "MerchantWorkflow": {
+        "MerchantWorkflowId": 1,
+        "MerchantWorkDesc": "Created"
+      }
+    },
+    {
+      "MerchantId": 2,
+      "MID": "M1R000002",
+      "ISSuperMerchant": true,
+      "CreatedDateTime": "2020-02-04T10:23:51.830Z",
+      "IsActive": true,
+      "FDTokenType": null,
+      "FDMID": null,
+      "BusinessDetail": {
+        "BusinessName": "Legal Business Name Updated",
+        "BusinessEmailID": "email@email.com",
+        "DBAStatementDesc": "Currency Pay"
+      },
+      "MerchantWorkflow": {
+        "MerchantWorkflowId": 1,
+        "MerchantWorkDesc": "Created"
+      }
+    }
+  ]
+}

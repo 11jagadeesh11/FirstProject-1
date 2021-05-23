@@ -1,0 +1,169 @@
+{
+    "BbbRating": {
+        "BbbRatingId": 2
+    },
+    "BusinessDetail": {
+        "AddressLine1": "123 Main Street",
+        "AddressLine2": "addressLine2",
+        "AmexProcessing": true,
+        "AverageTicketPrice": 1000,
+        "BankAccountNumber": "XXXXXXXXXXXX1111",
+        "BankDescription": "Bank Description",
+        "BankAccountType": {
+            "BankAccountTypeId": 3
+        },
+        "BankRoutingNumber": "123456789",
+        "BusinessContact": {
+            "BusinessContactTypeId": 2
+        },
+        "BusinessEmailID": "mdanjou@gocurrency.com",
+        "BusinessName": "Currency Pay",
+        "BusinessNameOnCard": "Business Name On Card",
+        "BusinessPhone": "+1 (888) 123-4567",
+        "BusinessType": {
+            "BusinessTypeId": 3
+        },
+        "City": "Los Angeles",
+        "Country": {
+            "CountryId": 1
+        },
+        "CreditCardSales": 20000,
+        "DBAStatementDesc": "Currency Pay",
+        "DiscoverProcessing": true,
+        "EmployeeIdentificationNumber": "123456789",
+        "Fax": "+1 (877) 123-4556",
+        "HighestTicketPrice": 5800,
+        "IncorporationState": {
+            "StateId": 5
+        },
+        "InstName": "Currency",
+        "IsBusinessForeignEntity": false,
+        "IsCreditCardAccepted": true,
+        "LegalContactName": "Matt",
+        "MCProcessing": true,
+        "PercentDelivered0Days": 20,
+        "PercentDelivered14Days": 20,
+        "PercentDelivered30Days": 20,
+        "PercentDelivered7Days": 20,
+        "PercentDeliveredMore30Days": 20,
+        "ServicePhone": "+1 (888) 123-4567",
+        "State": {
+            "StateId": 5
+        },
+        "TaxFilingName": "CurrencyPay",
+        "TaxIdNo": "12345678",
+        "TinRequestedGuid": "12345678",
+        "VisaProcessing": true,
+        "Website": "www.currencypay.com",
+        "YearIncorporated": 2018,
+        "YearsAtLocation": 20,
+        "YearsInBusiness": 20,
+        "Zip": "90025"
+    },
+    "BusinessToBusiness": 80,
+    "BusinessToConsumer": 80,
+    "Cash": "Yes",
+    "CityUrlPhone": "Los Angeles",
+    "Complaints12Months": 0,
+    "Complaints36Months": 0,
+    "EcommerceIndicator": "6",
+    "EmailTransactionsPer": 0,
+    "F2FTransactionsPer": 50,
+    "FeeProfile": {
+        "FeeProfileId": 1
+    },
+    "FSCurrentRation": 1000000000,
+    "FSDebtToTNWRatio": "4",
+    "FSNetIncome": 1000000000,
+    "FSNoOfMonths": 6,
+    "FSStatementEndDate": "10-31-2019",
+    "FSTangibleNetWorth": 1000000000,
+    "FSTotalAssets": 1000000000,
+    "FSTotalLiabilities": 1000000000,
+    "FSTotalRevenue": 1000000000,
+    "FSType": "Bank Statement",
+    "FSWorkingCapital": 1000000000,
+    "InternetTransactionsPer": 100,
+    "IsDraft": false,
+    "IsFSObtained": true,
+    "ISSuperMerchant": true,
+    "IsTcAccepted": true,
+    "L2L3Details": 
+        {
+            "CommodityCode": "929",
+            "Description": "Parts",
+            "DutyAmount": "1",
+            "ItemDiscount": "1",
+            "ItemPrice": "100",
+            "ItemTotal": "100",
+            "Name": "Trailer",
+            "NetworkType": "Visa",
+            "OrderDiscount": "1",
+            "ProductCode": "099 0",
+            "Quantity": "1",
+            "ShippingAmount": "1",
+            "Tax": "1",
+            "OrderNumber": "1",
+            "UnitofMeasure": "Each"
+            
+        },
+    "MerchantCategory": {
+        "MerchantCategoryId": 1
+    },
+    "MerchantType": {
+        "MerchantTypeId": 7
+    },
+    "MerchantWorkflow": {
+        "MerchantWorkflowId": 1
+    },
+    "OFACReviewPassed": true,
+    "OnSiteVisitPerformed": true,
+    "Owners": 
+        {
+            "AddressLine1": "123 fake street",
+            "AddressLine2": "Address Line2",
+            "BureauScore": 90,
+            "BusinessTitle": "CEO",
+            "City": "Los Angeles",
+            "Country": {
+                "CountryId": 1
+            },
+            "DOB": "09-21-1970",
+            "DriverLicense": "1234567891011",
+            "Email": "username@gocurrency.com",
+            "FirstName": "Charles",
+            "GovernmentDocuments": "Yes",
+            "IsGovernmentDocumentVerified": true,
+            "IsThirdPartyDatabaseVerified": true,
+            "LastName": "Last Name",
+            "MiddleName": "Middle Name",
+            "OwnershipPer": 9,
+            "OwnerType": {
+                "OwnerTypeId": 2
+            },
+            "PhoneNo": "+1 (888) 123-4567",
+            "SSN": "123456789",
+            "State": {
+                "StateId": 5
+            },
+            "ThirdPartyDatabaseType": "Yes",
+            "Title": "Mr.",
+            "Zip": "90066"
+        },
+    "PaymentTypes": 
+        {
+            "IsActive": true,
+            "PaymentTypeId": 1
+        },
+    "PhoneTransactionsPer": 0,
+    "PhoneEmailTransactionsPer":0,
+    "POSorCardTransactionsPer": 0,
+    "PricingType": "20",
+    "ProductsAndServicesSold": "Auction Rooms",
+    "ResidentStatus": "Citizen",
+    "SalesChannel": "Ecomm",
+    "SiteVisitation": true,
+    "MerchantCode": "merchantCode",
+    "ParentId": 1,
+    "TcAcceptedDateTime": "01-06-2019"
+}

@@ -1,0 +1,628 @@
+#%RAML 1.0 Library
+usage:
+types:
+  createmerchant:
+    type: object
+    properties:
+      BbbRating:
+        description: Better Business Bureau ratings to assess the credit worthiness or risk of potential merchant
+        required: true
+        type: object
+        properties:
+          BbbRatingId:
+            description: Unique ID of Better Business Bureau Id. Look here for possible values
+            required: false
+            type: number
+      BusinessDetail:
+        description: Business Details of Merchant
+        required: true
+        type: object
+        properties:
+          AddressLine1:
+            description: Merchant's Street Address. AddressLine1 should be alphanumeric with special characters.
+            required: true
+            type: string
+            minLength: 1
+            maxLength: 24
+          AddressLine2:
+            description: Merchant's Street Address. AddressLine2 should be alphanumeric with special characters.
+            required: false
+            type: string
+            minLength: 1
+            maxLength: 24
+          AmexProcessing:
+            description: American Express Processing
+            required: true
+            type: boolean
+          AverageTicketPrice:
+            description: Actual average ticket 
+            required: true
+            type: any
+          BankAccountNumber:
+            description: Merchant's bank account number
+            required: true
+            type: string
+          BankDescription:
+            description: Description about the bank
+            required: false
+            type: string
+          BankAccountType:
+            description: Bank Account Type of Merchant Sample Values -  Personal Checking, Personal Savings, Corporate Checking, Corporate Savings
+            required: true
+            type: object
+            properties:
+              BankAccountTypeId:
+                description: Unique ID of Bank Account Type. Look here for possible values
+                required: true
+                type: number
+          BankRoutingNumber:
+            description: BankRoutingNumber
+            required: true
+            type: string
+          BusinessContact:
+            description: Business Contact Type e.g. Trading, Billing, Location, Principal   
+            required: true
+            type: object
+            properties:
+              BusinessContactTypeId:
+                description: Unique ID of Bank Contact Type. Look here for possible values
+                required: false
+                type: number
+          BusinessEmailID:
+            description: Merchant's Business Email ID.  BusinessEmailID accepts alphanumeric and special characters.
+            required: true
+            type: string
+            minLength: 6
+            maxLength: 70
+          BusinessName:
+            description: Merchant's Business Name. Sample Values "Legal Business Name". "BusinessName should contain alphanumeric  with special characters.
+            required: true
+            type: string
+            minLength: 2
+            maxLength: 24
+          BusinessNameOnCard:
+            description: Merchant's Business Name On Card
+            required: false
+            type: string
+          BusinessPhone:
+            description: Merchant's Business Name On Card
+            required: true
+            type: string
+          BusinessType:
+            description: Merchant's Business Type. Sample Values-NONPROFIT,SOLE, CORP,LLC,PARTNER, GOV,PUBLIC COMPANY
+            required: true
+            type: object
+            properties:
+              BusinessTypeId:
+                description: Unique ID of Business Type. Look here for possible values
+                required: true
+                type: number
+          City:
+            description: City where Merchant's business is located in
+            required: true
+            type: string
+          Country:
+            description: Country where Merchant's business is located in 
+            required: true
+            type: object
+            properties:
+                CountryId:
+                  description: Unique ID of Country. Look here for possible values   
+                  required: true
+                  type: number
+          CreditCardSales:
+            description: Credit Card Sales
+            required: true
+            type: number
+            minimum: 1000
+            maximum: 10000000
+          DBAStatementDesc:
+            description: The name under which the Merchant is doing business
+            required: true
+            type: string
+          DiscoverProcessing:
+            description: Discover Processing
+            required: true
+            type: boolean
+          EmployeeIdentificationNumber:
+            description: Employer Identification Number is a unique nine-digit number assigned by the Internal Revenue Service to  business entities operating in the United States for the purposes of identification
+            required: true
+            type: string
+          Fax:
+            description: Fax number
+            required: false
+            type: string
+          HighestTicketPrice:
+            description: Actual or estimated highest ticket price in USD
+            required: true
+            type: any
+          IncorporationState:
+              description: State merchant's business is located in, abbreviated format i.e. for Alaska send AK
+              required: true
+              type: object
+              properties:
+                StateId:
+                  description: ID of State in Customer Billing Address. Look here for possible values
+                  required: false
+                  type: number
+          InstName:
+            description: Financial Institution Name
+            required: true
+            type: string
+          IsBusinessForeignEntity:
+            description: Indicates if the business can claim foreign status according to IRS regulations
+            required: true
+            type: boolean
+          IsCreditCardAccepted:
+            description: Is Credit Card Accepted? Possible values "true" or "false"
+            required: false
+            type: boolean
+          LegalContactName:
+            description: Legal Business Contact Name
+            required: true
+            type: string
+          MCProcessing:
+            description: Is Mastercard processing allowed? Possible values"true" or "false"
+            required: true
+            type: boolean
+          PercentDelivered0Days:
+            description: Percentage of services delivered within 0 days after transaction
+            required: true
+            type: number
+            format: float
+          PercentDelivered14Days:
+            description: Percentage of services delivered between 8 - 14 days after transaction
+            required: true
+            type: number
+            format: float
+          PercentDelivered30Days:
+            description: Percentage of services delivered between 15 - 30 days after transaction
+            required: true
+            type: number
+            format: float
+          PercentDelivered7Days:
+            description: Percentage of services delivered between 1-7 days after transaction
+            required: true
+            type: number
+            format: float
+          PercentDeliveredMore30Days:
+            description: Percentage of services delivered more than 30 days after transaction
+            required: true
+            type: number
+            format: float
+          ServicePhone:
+            description: Service Phone
+            required: true
+            type: string
+          State:
+            description: State is the merchant's business is located in,  abbreviated format i.e. for Alaska send AK
+            required: true
+            type: object
+            properties:
+              StateId:
+                description: ID of State in Customer Billing Address. Look here for possible values
+                required: true
+                type: number
+          TaxFilingName:
+            description: IRS tax filing name for the business Needs to be validated against Employee Identification Number. TaxFilingName should contain alphanumeric with special characters.
+            required: true
+            type: string
+            minLength: 2
+            maxLength: 24
+          TaxIdNo:
+            description: Owner’s Tax ID
+            required: true
+            type: string
+          TinRequestedGuid:
+            description: Universal ID for the request of the POST TIN/Validate service
+            required: true
+            type: string
+          VisaProcessing:
+            description: Visa Processing Yes or No
+            required: true
+            type: boolean
+          Website:
+            description: Business Website is required of a PFAC Sub-Merchant if the Percent of Transaction Volume is greater than 0% for eCommerce
+            required: true
+            type: string
+          YearIncorporated:
+            description: Year of incorporation in "yyyy" format. e.g. "1936"
+            required: true
+            type: number
+          YearsAtLocation:
+            description: Number of years the Business has been operating at the current location
+            required: true
+            type: number
+          YearsInBusiness:
+            description: Number of years in Business
+            required: true
+            type: number
+          Zip:
+            description: Business ZIP code. Zip should not contain all zeroes.
+            required: true
+            type: string
+            minLength: 5
+            maxLength: 5
+      BusinessToBusiness:
+        description: Percentage of total Annual Volume Business to Business
+        required: true
+        type: number
+      BusinessToConsumer:
+        description: Percentage of total annual volume Business to Consumer
+        required: true
+        type: number
+      Cash:
+        description: Cash If IsFSObtained is false then Cash is optional else required
+        required: true
+        type: string
+      CityUrlPhone:
+        description: City Url Phone. If IsFSObtained is false then CityUrlPhone is optional else required
+        required: true
+        type: string
+      Complaints12Months:
+        description: Number of Complaints in last 12 months
+        required: true
+        type: number
+      Complaints36Months:
+        description: Number of Complaints in last 36 months
+        required: true
+        type: number
+      EcommerceIndicator:
+        description: Ecommerce Indicator. If IsFSObtained is false then Ecommerce Indicator is optional else required
+        required: true
+        type: string
+      EmailTransactionsPer:
+        description: Percentage of payments/transactions made by email (can’t exceed 100%)
+        required: true
+        type: number
+      F2FTransactionsPer:
+        description: Percentage of payments/transactions made face to face (can’t exceed 100%)
+        required: true
+        type: number
+      FeeProfile:
+        description: FeeProfile
+        required: false
+        type: object
+        properties:
+          FeeProfileId:
+            description: Fee Profile Id
+            required: false
+            type: number
+      FSCurrentRation:
+        description: Current ration as per Financial Statement. If IsFSObtained is false then FSCurrentRation is optional else required
+        required: true
+        type: any
+      FSDebtToTNWRatio:
+        description: Debt to TNW Ratio as per Financial Statement. If IsFSObtained is false then FSDebtTo TNWRatio is optional else required
+        required: true
+        type: string
+      FSNetIncome:
+        description: Net income as per Financial Statement. If IsFSObtained is false then FSNetIncome is optional else required
+        required: true
+        type: any
+      FSNoOfMonths:
+        description: Number of months the Financial Statement covered. If IsFSObtained is false then FSNoOfMonths is optional else required
+        required: true
+        type: number
+      FSStatementEndDate:
+        description: Current ration as per Financial Statement. If IsFSObtained is false then FSStatement EndDate is optional else required
+        required: true
+        type: string
+      FSTangibleNetWorth:
+        description: Tangible net worth as per Financial Statement. If IsFSObtained is false then FSTangible NetWorth is optional else required
+        required: true
+        type: any
+      FSTotalAssets:
+        description: Total assets as per Financial Statement. If IsFSObtained is false then FSTotalAssets is optional else required
+        required: true
+        type: any
+      FSTotalLiabilities:
+        description: Total liabilities as per Financial Statement. If IsFSObtained is false then FSTotalLiabilities is optional else required
+        required: true
+        type: any
+      FSTotalRevenue:
+        description: Total revenue as per Financial Statement. If IsFSObtained is false then FSTotalRevenue is optional else required
+        required: true
+        type: any
+      FSType:
+        description: Type of Financial Statement obtained. If IsFSObtained is false then FSType is optional else required
+        required: true
+        type: string
+      FSWorkingCapital:
+        description: Working capital as per Financial Statement. If IsFSObtained is false then FSWorking Capital is optional else required
+        required: true
+        type: any
+      InternetTransactionsPer:
+        description: Percentage of payments/transactions made on the internet (can’t exceed 100%)
+        required: true
+        type: number
+      IsDraft:
+        description: Merchant's Submision Process IsDraft Default value for IsDraft is false. If the value of IsDraft is true then Merchant need to be approved from Currency Pay User
+        required: false
+        type: boolean
+      IsFSObtained:
+        description: Is Financial statement obtained? If value is Y, The fields i.e. type,endDate, cash, numberOfMonthstotalRevenue, netIncome, totalAssetstotal Liabilities, tangibleNetWorth workingCapital, currentRation, debtToTNWRatio- ecommerce Indicator, country,cityUrlPhone, residentStatus, salesChannel, salesCurrency are mandatory. Possible values are "true" or "false"
+        required: true
+        type: boolean
+      ISSuperMerchant:
+        description: If the Merchant has Sub Merchant IS SuperMerchant
+        required: false
+        type: boolean
+      IsTcAccepted:
+        description: Is Tc Accepted? Possible Values "true" or "false"
+        required: true
+        type: boolean
+      L2L3Details:
+        description: Level2 and Level3 Details
+        required: true
+        type: object
+        properties:
+          CommodityCode:
+            description: Commodity codes are used by corporate  purchasing organizations to segment and manage their total spend across diverse product lines. (i.e. United Nations Standard Products and Services Code (UNSPSC) If NetworkType is Amex then CommodityCode is Optional else Required
+            required: true
+            type: string
+          Description:
+            description: Description If NetworkType is Amex then Description is Optional else Required
+            required: true
+            type: string
+          DutyAmount:
+            description: The total duty amount applied to a transaction Duty Amount can be Import Tax, Custom Tax, Impost or LevyIf NetworkType is Amex then DutyAmount is Optional else Required
+            required: true
+            type: string
+          ItemDiscount:
+            description: Discount on Item If NetworkType is Amex then ItemDiscount is Optional else Required
+            required: true
+            type: string
+          ItemPrice:
+            description: Price of Item If NetworkType is Amex then ItemPrice is Optional else Required
+            required: true
+            type: string
+          ItemTotal:
+            description: Total of Item If NetworkType is Amex then ItemTotal is Optional else Required
+            required: true
+            type: string
+          Name:
+            description: Name If NetworkType is Amex then Name is Optional else Required
+            required: true
+            type: string
+          NetworkType:
+            description: Type of card e.g. VISA, AMEX
+            required: true
+            type: string
+          OrderDiscount:
+            description: Discount on Order If NetworkType is Amex then OrderDiscount is Optional else Required
+            required: true
+            type: string
+          ProductCode:
+            description: Product Code If NetworkType is Amex then ProductCode is Optional else Required
+            required: true
+            type: string
+          Quantity:
+            description: Quantity of Products If NetworkType is Amex then Quantity is Optional else Required
+            required: true
+            type: string
+          ShippingAmount:
+            description: Shipping Amount.If NetworkType is Amex then ShippingAmount is Optional else Required
+            required: true
+            type: string
+          Tax:
+            description: Tax
+            required: true
+            type: string
+          OrderNumber:
+            description: Order Number
+            required: false
+            type: string
+          UnitofMeasure:
+            description: The metric used for understanding quantity (i.e. a box of 12 pencils may be called DOZEN or BOX) If NetworkType is Amex then UnitofMeasure is Optional else Required
+            required: true
+            type: string
+      MerchantCategory:
+        description: Category of Merchant
+        required: true
+        type: object
+        properties:
+          MerchantCategoryId:
+            description: Unique ID of Merchant Type. Look here for possible values
+            required: true
+            type: number
+      MerchantWorkflow:
+        description: Merchant Workflow
+        required: true
+        type: object
+        properties:
+          MerchantWorkflowId:
+            description: Unique ID of Merchant Workflow. Look here for possible values
+            required: true
+            type: number
+      OFACReviewPassed:
+        description: The Office of Foreign Assets Control (OFAC) required when merchant is engaging in cross border commerce (accept payment from outside of the United States selling goods or services in other countries
+        required: true
+        type: boolean
+      OnSiteVisitPerformed:
+        description: Was the onsite visit performed?
+        required: true
+        type: boolean
+      Owners:
+        description: Merchant Owners
+        required: false
+        type: object
+        properties:
+          AddressLine1: 
+            description: Address of Owner. AddressLine1 should be alphanumeric with special characters.
+            required: true
+            type: string
+            minLength: 1
+            maxLength: 24
+          AddressLine2: 
+            description: Address of Owner. AddressLine2 should be alphanumeric with special characters.
+            required: false
+            type: string
+            minLength: 1
+            maxLength: 24
+          BureauScore:
+            description: BureauScore Required if  isCreditBureauReport Available is "Y"
+            required: true
+            type: number
+          BusinessTitle:
+            description: Business Title
+            required: true
+            type: string
+          City:
+            description: City the Owners is located in 
+            required: true
+            type: string
+          Country:
+            description: Country where Owners is located in
+            required: true
+            type: object
+            properties:
+              CountryId:
+                description: Unique ID of Country. Look here for possible values
+                required: true
+                type: number
+          DOB:
+            description: Owner’s date of birth in "mm-dd-yyyy" format
+            required: true
+            type: string
+          DriverLicense:
+            description: Driver License
+            required: false
+            type: string
+          Email:
+            description: Owner’s Email. Email accepts alphanumeric and special characters. 
+            required: true
+            type: string
+            minLength: 6
+            maxLength: 70
+          FirstName:
+            description: Owner’s first name. FirstName Should be in first and last name format without space. Minimum of two letters for first and last name.
+            required: true
+            type: string
+            minLength: 2
+            maxLength: 24
+          GovernmentDocuments:
+            description: What type of government document verified. Required ifgovernment DocumentVerified is "Y"
+            required: true
+            type: string
+          IsGovernmentDocumentVerified:
+            description: To identify merchant/owner a review of the government issues identity documents required. e.g. drivers license. The information is required to understand the level of risk associated with the merchant "true" or "false"
+            required: true
+            type: boolean
+          IsThirdPartyDatabaseVerified:
+            description: Third party database verification done for the principal owner "true" or "false"
+            required: true
+            type: boolean
+          LastName:
+            description: Owner’s Last Name. LastName Should be in first and last name format without space. Minimum of two letters for first and last name.
+            required: true
+            type: string
+            minLength: 2
+            maxLength: 24
+          MiddleName:
+            description: Owner’s Middle Name
+            required: false
+            type: string
+          OwnershipPer:
+            description: Percentage of ownership in case of multiple owners
+            required: true
+            type: number
+          OwnerType:
+            description: Owner Type Sample Value- Partner,Owner, Director
+            required: false
+            type: object
+            properties:
+              OwnerTypeId:
+                description: Unique ID of Owner Type. Look here for possible values
+                required: false
+                type: number
+          PhoneNo:
+            description: Owner's Phone Number.PhoneNo cannot contain all zeros and PhoneNo should start with one. 
+            required: true
+            type: string
+            minLength: 17
+            maxLength: 17
+          SSN:
+            description: Social Security Number
+            required: true
+            type: string
+          State:
+            description: State is the Owner's is located in, abbreviated format i.e. for Alaska send AK
+            required: true
+            type: object
+            properties:
+              StateId:
+                description: ID of State in Customer Billing Address. Look here for possible values
+                required: true
+                type: number
+          ThirdPartyDatabaseType:
+            description: Third Party Database Type
+            required: true
+            type: string
+          Title:
+            description: Title
+            required: true
+            type: string
+          Zip:
+            description: Zip should not contain all zeroes.
+            required: true
+            type: string
+            minLength: 5
+            maxLength: 5
+      PaymentTypes:
+        description: Types of Payments. Sample Values - Credit/Debit Card, Express Lending and ACH
+        required: false
+        type: object
+        properties:
+          IsActive:
+            description: Status of Merchant
+            required: false
+            type: boolean
+          PaymentTypeId:
+            description: Unique ID of Payment Type. Look here for possible values
+            required: false
+            type: number
+      PhoneTransactionsPer:
+        description: Percentage of payments/ transactions made by phone or email (can’t exceed 100%) 
+        required: true
+        type: number
+      PhoneEmailTransactionsPer:
+        description: Percentage of email/ transactions made by email (can’t exceed 100%)
+        required: false
+        type: number
+      POSorCardTransactionsPer:
+        description: Percentage of payments/transactions made by POS or Card (can’t exceed 100%)
+        required: false
+        type: number
+      PricingType:
+        description: Pricing Type
+        required: true
+        type: string
+      ProductsAndServicesSold:
+        description: A small description of what products and services are sold at the business location
+        required: true
+        type: string
+      ResidentStatus:
+        description: Resident Status. If IsFSObtained is false then ResidentStatus is optional else required
+        required: true
+        type: string
+      SalesChannel:
+        description: Sales Channel. If IsFSObtained is false then SalesChannel is optional else required
+        required: true
+        type: string
+      SiteVisitation:
+        description: Indicates whether site visitation is  required. Site Visitation is a requirement to board a PFAC  sub-Merchant if the % of transaction volume is greater than 0% for in-store locations face To Face
+        required: true
+        type: boolean
+      ParentId:
+        description: If you want Merchant as Sub Merchant Then You have to pass Parent Id of another Merchant e.g. MerchantId 7433 is Super Merchant and MerchantId 7455 is SubMerchant of MerchantId 7443 Then you have to pass ParentId as 7433
+        required: false
+        type: number
+      MerchantCode:
+        description: Unique Merchant Code
+        required: false
+        type: string
+      TcAcceptedDateTime:
+        description: Terms and Conditions Accepted Date Time
+        required: false
+        type: string
